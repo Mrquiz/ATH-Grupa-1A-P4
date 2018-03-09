@@ -21,6 +21,5 @@ namespace ATH_Grupa_1A_P4
         public float Discount { get; set; }
     
         public virtual Orders Orders { get; set; }
-        public virtual Products Products { get; set; }
     }
 }
