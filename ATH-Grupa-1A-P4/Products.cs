@@ -14,12 +14,6 @@ namespace ATH_Grupa_1A_P4
     
     public partial class Products
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Products()
-        {
-            this.Order_Details = new HashSet<Order_Details>();
-        }
-    
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public Nullable<int> SupplierID { get; set; }
@@ -31,7 +25,6 @@ namespace ATH_Grupa_1A_P4
         public Nullable<short> ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order_Details> Order_Details { get; set; }
+        public virtual Suppliers Suppliers { get; set; }
     }
 }
